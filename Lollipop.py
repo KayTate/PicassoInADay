@@ -1,7 +1,9 @@
+from colorSpace import *
+
 def lollipop():
+    colorBox()
 
     white = 255
-    background(white, white,white) # set backgroundcolor
     fill(white, white, white)
     
     

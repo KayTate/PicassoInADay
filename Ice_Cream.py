@@ -1,7 +1,7 @@
 from colorSpace import *
 
 def icecream(): 
-    colorSpace()
+    colorBox()
     
     fill(255)
     ellipse(405, 130, 200, 145 )

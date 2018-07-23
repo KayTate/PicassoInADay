@@ -2,7 +2,7 @@ from colorSpace import *
 
 def showPenguin():
     background(255) 
-    colorSpace()
+    colorBox()
     
 #Penguin Body
     strokeWeight(7)

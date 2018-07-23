@@ -5,7 +5,7 @@ from Ice_Cream import *
 from Finished import *
 from Lollipop import *
 
-page = "Title"
+page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished
 
 def setup():
     size(700,550)
@@ -24,3 +24,8 @@ def draw():
     if page == "Ice Cream":
         background(255)
         icecream()
+    if page == "Lollipop":
+        background(255)
+        lollipop()
+    if page == "Finished":
+        finished()
