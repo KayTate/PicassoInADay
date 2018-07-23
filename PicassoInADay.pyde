@@ -1,18 +1,8 @@
 from colorSpace import *
-
-<<<<<<< HEAD
-
-def setup():
-    size(700, 550)         # width, height//screen size
-    colorBox()
-=======
 from Penguin import *
 from Title import *
-<<<<<<< HEAD
-=======
 from Ice_Cream import *
 from Finished import *
->>>>>>> 2b634d9e69edf08a15747641be1f7c54657578ec
 from Lollipop import *
 
 page = "Title"
@@ -21,9 +11,6 @@ def setup():
     size(700,550)
     
 def draw():
-<<<<<<< HEAD
-    lollipop()
-=======
     global page
     if page == "Title":
         titlePage()
@@ -37,6 +24,3 @@ def draw():
     if page == "Ice Cream":
         background(255)
         icecream()
-
-        
->>>>>>> 2b634d9e69edf08a15747641be1f7c54657578ec
