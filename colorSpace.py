@@ -2,6 +2,7 @@ bS = 30
 yC = 520
 def colorSpace(): 
     size(700, 550)         # width, height
+    fill(255)
     rect(5, 5, 80, 505)    # xCoordinate, yCoordinate, width, height # side color selector
     rect(5, 515, 789, 80)  # bottom selector box
     rect(100, 5, 693, 505) # color space box
