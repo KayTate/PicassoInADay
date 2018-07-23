@@ -11,4 +11,4 @@ def finished():
     frame10 = loadImage("frame_009")
     frame11 = loadImage("frame_010")
     
-    while
+    #while
