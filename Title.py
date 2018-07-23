@@ -18,3 +18,4 @@ def titlePage():
     stroke(0)
     rect(49,199,151,151)
     image(penguin,50,200,150,150)
+    
