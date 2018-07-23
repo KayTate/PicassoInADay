@@ -1,4 +1,4 @@
-
+from colorSpace import *
 from Penguin import *
 from Title import *
 from Ice_Cream import *
@@ -11,6 +11,9 @@ def setup():
     size(700,550)
     
 def draw():
+<<<<<<< HEAD
+    lollipop()
+=======
     global page
     if page == "Title":
         titlePage()
@@ -26,3 +29,4 @@ def draw():
         icecream()
 
         
+>>>>>>> 2b634d9e69edf08a15747641be1f7c54657578ec
