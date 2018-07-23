@@ -1,6 +1,6 @@
 bS = 30
 yC = 520
-def setup(): 
+def colorSpace(): 
     size(700, 550)         # width, height
     rect(5, 5, 80, 505)    # xCoordinate, yCoordinate, width, height # side color selector
     rect(5, 515, 789, 80)  # bottom selector box
