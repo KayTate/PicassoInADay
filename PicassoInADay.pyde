@@ -1,4 +1,11 @@
+from colorSpace import *
 
+<<<<<<< HEAD
+
+def setup():
+    size(700, 550)         # width, height//screen size
+    colorBox()
+=======
 from Penguin import *
 from Title import *
 <<<<<<< HEAD
