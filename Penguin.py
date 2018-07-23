@@ -1,4 +1,8 @@
+from colorSpace import *
+
 def showPenguin():
+    background(255) 
+    colorSpace()
     
 #Penguin Body
     strokeWeight(7)
