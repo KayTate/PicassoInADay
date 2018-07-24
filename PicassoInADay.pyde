@@ -8,7 +8,7 @@ from Lollipop import *
 penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
-page = "Finished" #Other options: Penguin, Ice Cream, Lollipop, Finished
+page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished
 
 
 def setup():
@@ -22,13 +22,17 @@ def draw():
             page = "Penguin"
         if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 200 and mouseY < 350:
             page = "Ice Cream"
+        if mousePressed and mouseX > 506.5 and mouseX < 656.5 and mouseY > 200 and mouseY < 350:
+            page = "Lollipop"
+            
     if page == "Penguin":
         if not penguinAlreadyDrawn:
             background(255)
             showPenguin()
             penguinAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-            line(pmouseX, pmouseY, mouseX, mouseY) 
+            line(pmouseX, pmouseY, mouseX, mouseY)
+            
     if page == "Ice Cream":
         if not iceCreamAlreadyDrawn:
             background(255)
@@ -36,14 +40,14 @@ def draw():
             iceCreamAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
+            
     if page == "Lollipop":
         background(255)
         lollipop()
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-            line(pmouseX, pmouseY, mouseX, mouseY) 
+            line(pmouseX, pmouseY, mouseX, mouseY)
+            
     if page == "Finished":
         finished()
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title"
-    # if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-    #    line(pmouseX, pmouseY, mouseX, mouseY) 
