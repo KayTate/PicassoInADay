@@ -1,5 +1,5 @@
 def finished():
-    
+    background(255)
     #Loads GIF frames
     frame1 = loadImage("frame_000.png")
     frame2 = loadImage("frame_001.png")
@@ -13,52 +13,30 @@ def finished():
     frame10 = loadImage("frame_009.png")
     frame11 = loadImage("frame_010.png")
     
-    #image(frame1,0,0,700,550) #Temporarily displays the first frame of the GIF
-    for i in range(100):
-        background(255)
-        image(frame1,0,0,700,550)
-        background(255)
-        image(frame2,0,0,700,550)
-        background(255)
-        image(frame3,0,0,700,550)
-        background(255)
-        image(frame4,0,0,700,550)
-        background(255)
-        image(frame5,0,0,700,550)
-        background(255)
-        image(frame6,0,0,700,550)
-        background(255)
-        image(frame7,0,0,700,550)
-        background(255)
-        image(frame8,0,0,700,550)
-        background(255)
-        image(frame9,0,0,700,550)
-        background(255)
-        image(frame10,0,0,700,550)
-        background(255)
-        image(frame11,0,0,700,550)
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    image(frame1,0,0,700,550) #Temporarily displays the first frame of the GIF
+    # for i in range(100):
+    #     background(255)
+    #     image(frame1,0,0,700,550)
+    #     background(255)
+    #     image(frame2,0,0,700,550)
+    #     background(255)
+    #     image(frame3,0,0,700,550)
+    #     background(255)
+    #     image(frame4,0,0,700,550)
+    #     background(255)
+    #     image(frame5,0,0,700,550)
+    #     background(255)
+    #     image(frame6,0,0,700,550)
+    #     background(255)
+    #     image(frame7,0,0,700,550)
+    #     background(255)
+    #     image(frame8,0,0,700,550)
+    #     background(255)
+    #     image(frame9,0,0,700,550)
+    #     background(255)
+    #     image(frame10,0,0,700,550)
+    #     background(255)
+    #     image(frame11,0,0,700,550)
     
     #List for motivational quotes
     motivation = [

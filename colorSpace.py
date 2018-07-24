@@ -5,11 +5,7 @@ xC2 = 15
 # add 42.5 to every y cordinate ( for the outer color box)
 
 def colorBox(): 
-<<<<<<< HEAD
-    strokeWeight(1)
-=======
     fill(255)
->>>>>>> 85237119908ec41c65b69ddfc88fc443d81056be
     rect(5, 5, 80, 540)    # xCoordinate, yCoordinate, width, height//side color selector
     rect(100, 5, 595, 540) # color space box
     
@@ -64,7 +60,7 @@ def mouseClicked():
         stroke(0, 0, 0)
     elif mouseX > 10 and mouseX < 45 and mouseY > 95 and mouseY < 130:
         stroke(219, 112, 147)
-    elif
+    #elif
         
         
         
