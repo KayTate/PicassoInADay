@@ -59,3 +59,7 @@ def draw():
         finished(number)
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title"
+            
+    if page != "Finished" and page != "Title":
+        if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
+            page = "Finished"
