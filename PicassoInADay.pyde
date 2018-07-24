@@ -38,3 +38,9 @@ def draw():
         finished()
     if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
        line(pmouseX, pmouseY, mouseX, mouseY) 
+       
+    if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
+        setRainbowMode()
+    
+    updateRainbowColor()
+    

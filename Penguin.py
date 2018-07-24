@@ -51,7 +51,7 @@ def showPenguin():
           486,295,
           370,400)
     line(428,193,486,295)
-    
+    strokeWeight(1)
     
     
     
