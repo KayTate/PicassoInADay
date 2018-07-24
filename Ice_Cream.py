@@ -5,7 +5,7 @@ def icecream():
     strokeWeight(2)
     noFill()
     ellipse(405, 130, 200, 145 )
-    noFill()
+    fill(255)
     triangle( 405, 470, 500, 165, 310, 165)
     noFill()
     ellipse(405, 53, 10, 10)
