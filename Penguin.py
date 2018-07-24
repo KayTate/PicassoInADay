@@ -4,6 +4,7 @@ def showPenguin():
     background(255) 
     colorBox()
     
+    
 #Penguin Body
     strokeWeight(7)
     fill(255)
