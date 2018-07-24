@@ -9,7 +9,7 @@ from Buttons import *
 penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
-page = "Finished" #Other options: Penguin, Ice Cream, Lollipop, Finished
+page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished
 number = int(random(0,3))
 
 def setup():
