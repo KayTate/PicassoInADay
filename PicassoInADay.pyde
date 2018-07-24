@@ -5,7 +5,7 @@ from Ice_Cream import *
 from Finished import *
 from Lollipop import *
 
-page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished
+page = "Penguin" #Other options: Penguin, Ice Cream, Lollipop, Finished
 
 def setup():
     size(700,550)

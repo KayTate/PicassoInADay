@@ -5,7 +5,7 @@ def showPenguin():
     colorBox()
     
 #Penguin Body
-    strokeWeight(7)
+    strokeWeight(2)
     fill(255)
     #Feet
     ellipse(350,415,50,30) #Left Foot
@@ -38,7 +38,7 @@ def showPenguin():
     ellipse(397,150, eyeSize/2, eyeSize/2) #Right Pupil
     
     #Wings
-    strokeWeight(7)
+    strokeWeight(2)
     fill(255)
     curve(385,300, #Left Wing
           342,193,
