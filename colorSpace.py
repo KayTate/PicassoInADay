@@ -5,14 +5,14 @@ xC2 = 15
 # add 42.5 to every y cordinate ( for the outer color box)
 
 def colorBox(): 
-    
+    fill(255)
     rect(5, 5, 80, 540)    # xCoordinate, yCoordinate, width, height//side color selector
     rect(100, 5, 595, 540) # color space box
     
-    rect(xC, 10, bS, bS)   # x, y, w, h
+    rect(xC, 10, bS, bS)   # x, y, w, h//white
     noStroke()
     fill(0) # black
-    rect(35, 52.5, bS, bS) # x, y, w, h//outer box
+    rect(bS, 52.5, bS, bS) # x, y, w, h//outer box
     fill(219, 112, 147) # pink
     rect(xC, 95, bS, bS)
     fill(160, 32, 240) # purple
@@ -29,7 +29,7 @@ def colorBox():
     rect(xC, 350, bS, bS)
     stroke(0)
     noFill()
-    rect(bS, 392.5, bS, bS) # outer box
+    rect(bS, 392.5, bS, bS) # outer box//random colors
                 # EDITTING TOOLS
     strokeWeight(3)
     ellipse(27.5, 447, xC, xC)
@@ -50,10 +50,28 @@ def colorBox():
     
     
 
-    if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-       line(pmouseX, pmouseY, mouseX, mouseY) 
-
+    
 
 def mouseClicked():
     if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
-        stroke(255, 255, 255)
+        print("yellow")
+        stroke(255, 255, 0)
+    elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
+        stroke(0, 0, 0)
+    elif mouseX > 10 and mouseX < 45 and mouseY > 95 and mouseY < 130:
+        stroke(219, 112, 147)
+    #elif
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
