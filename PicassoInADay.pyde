@@ -58,8 +58,8 @@ def draw():
             
     if page == "Finished":
         finished(number)
-        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-            line(pmouseX, pmouseY, mouseX, mouseY) 
+        # if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+        #     line(pmouseX, pmouseY, mouseX, mouseY) 
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title"
 
@@ -116,9 +116,12 @@ def mouseClicked():
             # rainbowMode = True
         elif mouseX > 10 and mouseX < 75 and mouseY > 515 and mouseY < 540: # clear
             clearPage()
-        if mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
+        elif mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
+            print("yes")
             strokeWeight(7) # thick stroke weight
-        if mouseX > 50 and mouseX < 25 and mouseY > 477.5 and mouseY < 502.5:
+        elif mouseX > 50 and mouseX < 75 and mouseY > 477.5 and mouseY < 502.5:
+            print("right")
             strokeWeight(1) # thin stroke weight
-        if mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
-            strokeWeight(3)    
+        elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
+            print("left")  
+            strokeWeight(3) 
