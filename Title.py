@@ -18,9 +18,19 @@ def titlePage():
     stroke(0)
     rect(40.5,199,151,151)
     image(penguin,41.5,200,150,150)
+    textSize(25)
+    text("Polly the Penguin",37,385)
     
     #Ice Cream Box
     iceCream = loadImage("icecream.png")
     stroke(0)
     rect(273.5,199,151,151)
     image(iceCream,274.5,200,150,150)
+    text("World's Best Ice Cream",243,385)
+    
+    #Lollipop Box
+    lollipop = loadImage("lollipop.png")
+    stroke(0)
+    rect(506.5,199,151,151)
+    image(lollipop,507.5,200,150,150)
+    text("Lollipop Land",520,385)
