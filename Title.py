@@ -2,7 +2,7 @@ def titlePage():
     background(255)
     
     #Header
-    fill("#CA7AE0")
+    fill("#8AA8E8")
     noStroke()
     rect(0,0,700,100)
     
