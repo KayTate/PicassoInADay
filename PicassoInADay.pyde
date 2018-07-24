@@ -9,12 +9,11 @@ from Buttons import *
 penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
-page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished
+page = "Finished" #Other options: Penguin, Ice Cream, Lollipop, Finished
 number = int(random(0,3))
 
 def setup():
     size(700,550)
-    
     
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn
@@ -59,12 +58,23 @@ def draw():
             
     if page == "Finished":
         finished(number)
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title"
+
             
     elif page != "Finished" or page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"
+
+    if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
+        setRainbowMode()
+    
+    updateRainbowColor()
+    if page != "Finished" and page != "Title":
+
+        
         #code used for the next button
 def mouseClicked():    
     global page
@@ -74,11 +84,3 @@ def mouseClicked():
         page = "Lollipop"
     elif page == "Lollipop" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Finished"
-        
-         # elif mousePressed and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-         #     if page == "Penguin":
-         #         page = "Ice Cream"
-         #     elif page == "Ice Cream":
-         #         page = "Lollipop"
-         #     elif page == "Lollipop":
-         #         page = "Finished"

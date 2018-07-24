@@ -14,8 +14,6 @@ def finished(number):
             "You're the new Picasso!"   #2
             ]
     
-    listIndex = number
-    
     #Rectangle containing text at the center of the screen
     strokeWeight(3)
     stroke("#E88AD8")
@@ -23,14 +21,15 @@ def finished(number):
     rect(87.5,137.5,525,275,50)
     
     #Displays text in the center of the rectangle
+    listIndex = number
     fill("#E88AD8")
     textSize(45)
     if listIndex == 0:
-        text(motivation[0], 175, 275)
+        text(motivation[0], 195, 275)
     if listIndex == 1:
-        text(motivation[1], 145, 275)
+        text(motivation[1], 185, 275)
     if listIndex == 2:
-        text(motivation[2], 92, 275)
+        text(motivation[2], 145, 275)
     
     #Start over button
     stroke("#E88AD8")
