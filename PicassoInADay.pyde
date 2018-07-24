@@ -60,10 +60,7 @@ def draw():
             line(pmouseX, pmouseY, mouseX, mouseY) 
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title"
-    if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
-        setRainbowMode()
     
-    updateRainbowColor()
     if page != "Finished" and page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"

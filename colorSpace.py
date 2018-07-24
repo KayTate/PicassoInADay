@@ -5,6 +5,7 @@ xC2 = 15
 # add 42.5 to every y cordinate ( for the outer color box)
 page = "Title"
 rainbowMode = False
+
 def colorBox(): 
     global page
     fill(255)
@@ -53,7 +54,9 @@ def colorBox():
     
     
 def setRainbowMode():
+    global rainbowMode
     rainbowMode = True
+    
     
 def updateRainbowColor():
     stroke(random(255), random(255), random(255))
@@ -67,36 +70,41 @@ def clearPage():
         lollipop()    
 
 def mouseClicked():
+    global rainbowMode
     if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
        line(pmouseX, pmouseY, mouseX, mouseY)
     if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
         print("yellow")
+        rainbowMode = False
         stroke(255, 255, 0)
-        rainbowMode = True
+        
     elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
         stroke(0, 0, 0) # black//outer box
-        rainbowMode = True
+        rainbowMode = False
     elif mouseX > 10 and mouseX < 45 and mouseY > 95 and mouseY < 130:
         stroke(219, 112, 147) # pink
-        rainbowMode = True
+        rainbowMode = False
     elif mouseX > 35 and mouseX < 70 and mouseY > 137.5 and mouseY < 172.5:
         stroke(160, 32, 240) # purple//outer box
-        rainbowMode = True
+        rainbowMode = False
     elif mouseX > 10 and mouseX < 45 and mouseY > 180 and mouseY < 215:
         stroke(0, 100, 0) # green
         rainbowMode = True
     elif mouseX > 35 and mouseX < 70 and mouseY > 222.5 and mouseY < 257.5:
         stroke(0, 0, 255) # blue//outer box
-        rainbowMode = True
+        rainbowMode = False
     elif mouseX > 10 and mouseX < 45 and mouseY > 265 and mouseY < 300:
         stroke(255, 255, 0) # yellow
-        rainbowMode = True
+        rainbowMode = False
     elif mouseX > 35 and mouseX < 70 and mouseY > 307.5 and mouseY < 342.5:
         stroke(255, 140, 0) # orange//outer box
-        rainbowMode = True
+        rainbowMode = False
     elif mouseX > 10 and mouseX < 45 and mouseY > 350 and mouseY < 385:
         stroke(255, 0, 0) # red
-        rainbowMode = True
+        rainbowMode = False
+    if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
+        setRainbowMode()
+        updateRainbowColor()
     elif mouseX > 10 and mouseX < 75 and mouseY > 515 and mouseY < 540: # clear
         clearPage()
     elif mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
