@@ -2,10 +2,10 @@ from colorSpace import *
 
 def icecream(): 
     colorBox()
-    
-    fill(255)
+    strokeWeight(2)
+    noFill()
     ellipse(405, 130, 200, 145 )
-    fill(255)
+    noFill()
     triangle( 405, 470, 500, 165, 310, 165)
-    fill(255)
+    noFill()
     ellipse(405, 53, 10, 10)

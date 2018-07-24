@@ -1,29 +1,42 @@
-def finished():
+def finished(number):
     background(255)
-    i = 0
+    titleFont = loadFont("CurlzMT-48.vlw")
+    textFont(titleFont)
+        
+    #Loads and displays image
+    frame1 = loadImage("frame_000.png")
+    image(frame1,0,0,700,550)
     
-    frame1 = loadImage("frame_000")
-    frame2 = loadImage("frame_001")
-    frame3 = loadImage("frame_002")
-    frame4 = loadImage("frame_003")
-    frame5 = loadImage("frame_004")
-    frame6 = loadImage("frame_005")
-    frame7 = loadImage("frame_006")
-    frame8 = loadImage("frame_007")
-    frame9 = loadImage("frame_008")
-    frame10 = loadImage("frame_009")
-    frame11 = loadImage("frame_010")
+    #List for motivational quotes
+    motivation = [
+            "You're a winner!",         #0
+            "That was beautiful!",      #1
+            "You're the new Picasso!"   #2
+            ]
     
-    while i < 10:
-        image(frame1,0,0,700,550)
-        image(frame2,0,0,700,550)
-        image(frame3,0,0,700,550)
-        image(frame4,0,0,700,550)
-        image(frame5,0,0,700,550)
-        image(frame6,0,0,700,550)
-        image(frame7,0,0,700,550)
-        image(frame8,0,0,700,550)
-        image(frame9,0,0,700,550)
-        image(frame10,0,0,700,550)
-        image(frame11,0,0,700,550)
-        i += 1
+    #Rectangle containing text at the center of the screen
+    strokeWeight(3)
+    stroke("#E88AD8")
+    fill(255,255,255,200)
+    rect(87.5,137.5,525,275,50)
+    
+    #Displays text in the center of the rectangle
+    listIndex = number
+    fill("#E88AD8")
+    textSize(45)
+    if listIndex == 0:
+        text(motivation[0], 195, 275)
+    if listIndex == 1:
+        text(motivation[1], 185, 275)
+    if listIndex == 2:
+        text(motivation[2], 145, 275)
+    
+    #Start over button
+    stroke("#E88AD8")
+    fill(255,255,255,200)
+    rect(580,490,100,50,15)
+    
+    #Start over text
+    textSize(20)
+    fill("#E88AD8")
+    text("Start Over",582,520)
