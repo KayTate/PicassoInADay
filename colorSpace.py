@@ -5,7 +5,7 @@ xC2 = 15
 # add 42.5 to every y cordinate ( for the outer color box)
 
 def colorBox(): 
-    
+    strokeWeight(1)
     rect(5, 5, 80, 540)    # xCoordinate, yCoordinate, width, height//side color selector
     rect(100, 5, 595, 540) # color space box
     
