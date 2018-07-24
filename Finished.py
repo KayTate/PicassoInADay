@@ -1,6 +1,8 @@
 def finished(number):
     background(255)
-    
+    titleFont = loadFont("CurlzMT-48.vlw")
+    textFont(titleFont)
+        
     #Loads and displays image
     frame1 = loadImage("frame_000.png")
     image(frame1,0,0,700,550)
