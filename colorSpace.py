@@ -6,13 +6,15 @@ xC2 = 15
 page = "Title"
 # rainbowMode = False
 
+
 def colorBox(): 
     global page
     fill(255)
     rect(5, 5, 80, 540)    # xCoordinate, yCoordinate, width, height//side color selector
     rect(100, 5, 595, 540) # color space box
-    
-    rect(xC, 10, bS, bS)   # x, y, w, h//white
+    noStroke()
+    fill(104, 67, 42) # brown
+    rect(xC, 10, bS, bS)   # x, y, w, h
     noStroke()
     fill(0) # black
     rect(bS, 52.5, bS, bS) # x, y, w, h//outer box
@@ -32,6 +34,8 @@ def colorBox():
     rect(xC, 350, bS, bS)
     stroke(0)
     noFill()
+    img = loadImage("question-mark")
+    image(img, bS, 392.5, 20, 15)
     rect(bS, 392.5, bS, bS) # outer box//random colors
                    # EDITTING TOOLS
     strokeWeight(3)
@@ -58,115 +62,14 @@ def colorBox():
 #     rainbowMode = True
     
     
-def updateRainbowColor():
-    stroke(random(255), random(255), random(255))
+# def updateRainbowColor():
+#     stroke(random(255), random(255), random(255))
 
 def clearPage():
+    print(page)
     if page == "Penguin":
         showPenguin()
     if page == "Ice Cream":
         icecream()
     if page == "Lollipop":
         lollipop()    
-
-
-# def mouseClicked():
-#     global rainbowMode
-#     if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-#        line(pmouseX, pmouseY, mouseX, mouseY)
-#     if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
-#         print("yellow")
-#         # rainbowMode = False
-#         stroke(255, 255, 0)
-
-
-        
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
-#         stroke(0, 0, 0) # black//outer box
-#         # rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 95 and mouseY < 130:
-#         stroke(219, 112, 147) # pink
-#         # rainbowMode = False
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 137.5 and mouseY < 172.5:
-#         stroke(160, 32, 240) # purple//outer box
-#         # rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 180 and mouseY < 215:
-#         stroke(0, 100, 0) # green
-#         # rainbowMode = True
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 222.5 and mouseY < 257.5:
-#         stroke(0, 0, 255) # blue//outer box
-#         # rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 265 and mouseY < 300:
-#         stroke(255, 255, 0) # yellow
-#         # rainbowMode = False
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 307.5 and mouseY < 342.5:
-#         stroke(255, 140, 0) # orange//outer box
-#         rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 350 and mouseY < 385:
-#         stroke(255, 0, 0) # red
-#         # rainbowMode = False
-#     # if mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
-#     #     setRainbowMode()
-#     #     updateRainbowColor()
-#     elif mouseX > 10 and mouseX < 75 and mouseY > 515 and mouseY < 540: # clear
-#         clearPage()
-#     elif mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
-#         strokeWeight(7) # thick stroke weight
-#     if mousePressed and mouseX > 50 and mouseX < 75 and mouseY > 477.5 and mouseY < 502.5:
-#         strokeWeight(11) # thin stroke weight
-#     elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
-#         strokeWeight(3)    
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
-#         stroke(0, 0, 0) # black//outer box
-#         # rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 95 and mouseY < 130:
-#         stroke(219, 112, 147) # pink
-#         # rainbowMode = False
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 137.5 and mouseY < 172.5:
-#         stroke(160, 32, 240) # purple//outer box
-#         # rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 180 and mouseY < 215:
-#         stroke(0, 100, 0) # green
-#         # rainbowMode = True
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 222.5 and mouseY < 257.5:
-#         stroke(0, 0, 255) # blue//outer box
-#         # rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 265 and mouseY < 300:
-#         stroke(255, 255, 0) # yellow
-#         # rainbowMode = False
-#     elif mouseX > 35 and mouseX < 70 and mouseY > 307.5 and mouseY < 342.5:
-#         stroke(255, 140, 0) # orange//outer box
-#         rainbowMode = False
-#     elif mouseX > 10 and mouseX < 45 and mouseY > 350 and mouseY < 385:
-#         stroke(255, 0, 0) # red
-#         # rainbowMode = False
-#     # if mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
-#     #     setRainbowMode()
-#     #     updateRainbowColor()
-#     elif mouseX > 10 and mouseX < 75 and mouseY > 515 and mouseY < 540: # clear
-#         clearPage()
-#     elif mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
-#         print("yes")
-#         strokeWeight(7) # thick stroke weight
-#     elif mouseX > 50 and mouseX < 75 and mouseY > 477.5 and mouseY < 502.5:
-#         print("right")
-#         strokeWeight(20) # thin stroke weight
-        
-#     elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
-#         print("left")  
-#         strokeWeight(3) 
-         
-   
