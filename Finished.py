@@ -39,4 +39,22 @@ def finished(number):
     #Start over text
     textSize(20)
     fill("#E88AD8")
-    text("Start Over",582,520)
+    text("Start Over",593,520)
+    
+    # credits
+    subTitleFont = loadFont("Garamond-Bold-26.vlw")
+    c = "Created by:"
+    aC = "Ariana Chretien"
+    sJ = "Stacia Jones"
+    kT = "Kaycee Tate"
+    kS = "Kenlen Smith"
+    textFont(subTitleFont)
+    textSize(24)
+    fill(181, 65, 244)
+    text(c, 40, 463)
+    text(aC, 83, 527)
+    text(sJ, 5, 507)
+    text(kT, 83, 488)
+    text(kS, 5, 545)
+    
+    
