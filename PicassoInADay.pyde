@@ -115,7 +115,10 @@ def draw():
     if page == "Finished":
         finished(number)
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
-            page = "Title"
+            page = "Title" 
+            iceCreamAlreadyDrawn = False
+            penguinAlredyDrawn = False
+            lollipopAlreadyDrawn = False
 
     elif page != "Finished" or page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
@@ -127,17 +130,32 @@ def draw():
     
     # updateRainbowColor()        
         #code used for the next button
+        
+        
+        #penguinAlreadyDrawn = False
+       #iceCreamAlreadyDrawn = False
+       #lollipopAlreadyDrawn = False
+        #rainbowAlreadyDrawn = False
 
 def mouseClicked():
-    global page
-    if page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Ice Cream"
+    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn:
+        page = "Finished"
+    elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page = "Ice Cream" 
     elif page == "Ice Cream"  and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Lollipop"
     elif page == "Lollipop" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Finished"
+        page = "Penguin"
+        
+        
 
+
+<<<<<<< HEAD
     if  page != "Finished" or page != "Title":
+=======
+    if page != "Finished" or page != "Title":
+>>>>>>> bf87ab2cee1c3cc9f34e46fb55331a258190bee2
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
