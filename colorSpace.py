@@ -3,13 +3,15 @@ xC = 10
 bS2 = 25
 xC2 = 15
 # add 42.5 to every y cordinate ( for the outer color box)
-page = "Title"
+
 # rainbowMode = False
 
 
 def colorBox(): 
     global page
     fill(255)
+    stroke(0)
+    strokeWeight(1)
     rect(5, 5, 80, 540)    # xCoordinate, yCoordinate, width, height//side color selector
     rect(100, 5, 595, 540) # color space box
     noStroke()
@@ -35,7 +37,8 @@ def colorBox():
     stroke(0)
     noFill()
     img = loadImage("question-mark.jpg")
-    image(img, bS, 392.5, 20, 15)
+    image(img, 30, 393.5, 45, 35)
+    strokeWeight(1)
     rect(bS, 392.5, bS, bS) # outer box//random colors
                    # EDITTING TOOLS
     strokeWeight(3)
@@ -48,10 +51,17 @@ def colorBox():
     strokeWeight(1)
     rect(50, 435, bS2, bS2) # thick stroke
     
+    strokeWeight(8)
+    ellipse(27.5, 489, xC, xC)
+    strokeWeight(1)
+    rect(15, 477.5, bS2, bS2) # thickest stroke
 
+    strokeWeight(1)
     ellipse(63, 489, xC, xC)
     rect(50, 477.5, bS2, bS2) # regular thin stroke weight
     
+    titleFont = loadFont("CurlzMT-48.vlw")
+    textFont(titleFont)
     textSize(18);
     text("CLEAR", 15, 535);
     rect(xC, 515, 65, bS2) # CLEAR box
@@ -64,12 +74,3 @@ def colorBox():
     
 # def updateRainbowColor():
 #     stroke(random(255), random(255), random(255))
-
-def clearPage():
-    print(page)
-    if page == "Penguin":
-        showPenguin()
-    if page == "Ice Cream":
-        icecream()
-    if page == "Lollipop":
-        lollipop()    
