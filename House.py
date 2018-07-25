@@ -1,6 +1,7 @@
 from colorSpace import *
 
 def house():
+
     colorBox()
     fill(255)
     stroke(0)
