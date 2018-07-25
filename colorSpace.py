@@ -78,8 +78,6 @@ def clearPage():
 #         print("yellow")
 #         # rainbowMode = False
 #         stroke(255, 255, 0)
-<<<<<<< HEAD
-=======
         
 #     elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
 #         stroke(0, 0, 0) # black//outer box
@@ -127,8 +125,6 @@ def clearPage():
         
         
         
-        
->>>>>>> a40c2000c3166ac8a14a313ae72eb4191a0f3474
         
 #     elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
 #         stroke(0, 0, 0) # black//outer box

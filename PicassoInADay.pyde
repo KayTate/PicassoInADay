@@ -6,28 +6,34 @@ from Finished import *
 from Lollipop import *
 from Buttons import *
 from Rainbow import *
+from House import *
 
 penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
-page = "Rainbow" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow
+houseAlreadyDrawn = False
+page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
 number = int(random(0,3))
 
 def setup():
     size(700,550)
     
 def draw():
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn
     print(mouseX, mouseY)
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn
     if page == "Title":
         titlePage()
-        if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 200 and mouseY < 350:
+        if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
             page = "Penguin"
-        if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 200 and mouseY < 350:
+        if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 130 and mouseY < 280:
             page = "Ice Cream"
-        if mousePressed and mouseX > 506.5 and mouseX < 656.5 and mouseY > 200 and mouseY < 350:
+        if mousePressed and mouseX > 506.5 and mouseX < 656.5 and mouseY > 130 and mouseY < 280:
             page = "Lollipop"
+        if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 345 and mouseY < 495:
+            page = "Rainbow"
+        if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 345 and mouseY < 495:
+            page = "House"
             
     if page == "Penguin":
         if not penguinAlreadyDrawn:
@@ -68,15 +74,22 @@ def draw():
             rainbowAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
+            
+    if page == "House":
+        if not houseAlreadyDrawn:
+            background(255)
+            house()
+            finishedButton()
+            nextPage()
+            houseAlreadyDrawn = True
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
                     
     if page == "Finished":
         finished(number)
-        # if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-        #     line(pmouseX, pmouseY, mouseX, mouseY) 
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title"
 
-            
     elif page != "Finished" or page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"
