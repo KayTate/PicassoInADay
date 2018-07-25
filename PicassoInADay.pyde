@@ -20,7 +20,6 @@ def setup():
     size(700,550)
     
 def draw():
-    print(mouseX, mouseY)
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn
     if page == "Title":
         titlePage()
@@ -34,7 +33,8 @@ def draw():
             page = "Rainbow"
         if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 345 and mouseY < 495:
             page = "House"
-            
+
+
     if page == "Penguin":
         if not penguinAlreadyDrawn:
             background(255)
@@ -94,8 +94,9 @@ def draw():
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"
 
-    # if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
-    #     setRainbowMode()
+    if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
+         stroke(random(255), random(255), random(255)) # random color box
+         print("random")
     
     # updateRainbowColor()        
         #code used for the next button
@@ -113,8 +114,8 @@ def mouseClicked():
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
-            print("yellow")
-            stroke(255, 255, 0)
+            # print("yellow")
+            stroke(104, 67, 42)
             # rainbowMode = True
         elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
             stroke(0, 0, 0) # black//outer box
@@ -142,12 +143,16 @@ def mouseClicked():
             # rainbowMode = True
         elif mouseX > 10 and mouseX < 75 and mouseY > 515 and mouseY < 540: # clear
             clearPage()
+            print("clear")
+        elif mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
+            stroke(random(255), random(255), random(255))
+            print("random")
         elif mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
-            print("yes")
+            # print("yes")
             strokeWeight(7) # thick stroke weight
         elif mouseX > 50 and mouseX < 75 and mouseY > 477.5 and mouseY < 502.5:
-            print("right")
+            # print("right")
             strokeWeight(1) # thin stroke weight
         elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
-            print("left")  
+            # print("left")  
             strokeWeight(3) 
