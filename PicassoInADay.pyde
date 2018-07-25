@@ -8,6 +8,7 @@ from Lollipop import *
 from Buttons import *
 from Rainbow import *
 from House import *
+from snowman import *
 from Ladybug import *
 
 #Global variables to prevent redraw
@@ -16,6 +17,7 @@ iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
+snowmanAlreadyDrawn = False
 ladybugAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower, MoreDrawings
@@ -23,7 +25,6 @@ page = "Title"
 
 #Global variable to assign a random number to the finished function to generate a quote
 number = int(random(0,3))
-
 def setup():
     size(700,550)
     background(0)
@@ -53,11 +54,15 @@ def clearPage():
         house()
         finishedButton()
         nextPage()       
-  
+    if page == "Ladybug":
+        ladybug()
+        finishedButton()
+        nextPage()
 
 def draw():
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn
     print(mouseX, mouseY)
+
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -121,6 +126,16 @@ def draw():
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
             
+    if page == "Snowman":
+        if not snowmanAlreadyDrawn:
+            background(255)
+            Snowman()
+            finishedButton()
+            nextPage()
+            snowmanAlreadyDrawn = True
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
+                         
     if page == "Ladybug":
         if not ladybugAlreadyDrawn:
             background(255)
@@ -164,7 +179,8 @@ def mouseClicked():
     elif page == "House" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
         
-    if page != "Finished" and page != "Title":
+
+    if page != "Finished" or page != "Title":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
