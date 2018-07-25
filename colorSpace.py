@@ -37,12 +37,8 @@ def colorBox():
     stroke(0)
     noFill()
     img = loadImage("question-mark.jpg")
-<<<<<<< HEAD
-    image(img, bS, 392.5, 20, 15)
-=======
     image(img, 30, 393.5, 45, 35)
     strokeWeight(1)
->>>>>>> 45cbaba4824e298d9aefb7dc96395f45e5975763
     rect(bS, 392.5, bS, bS) # outer box//random colors
                    # EDITTING TOOLS
     strokeWeight(3)
