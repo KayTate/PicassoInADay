@@ -8,13 +8,9 @@ from Lollipop import *
 from Buttons import *
 from Rainbow import *
 from House import *
-<<<<<<< HEAD
+
 
 from snowman import *
-
-=======
-from snowman import *
->>>>>>> ef7f7d34cdbba5302212f961d60382ef9641c0bd
 from Ladybug import *
 
 #Global variables to prevent redraw
@@ -23,19 +19,12 @@ iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
-<<<<<<< HEAD
 snowmanAlreadyDrawn = False
 ladybugAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower
-page = "Title"
+page = "Snowman"
 
-=======
-ladybugAlreadyDrawn = False
-snowmanAlreadyDrawn = False
-page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
->>>>>>> ef7f7d34cdbba5302212f961d60382ef9641c0bd
-#Global variable to assign a random number to the finished function to generate a quote
 number = int(random(0,3))
 def setup():
     size(700,550)
@@ -72,13 +61,10 @@ def clearPage():
         nextPage()
 
 def draw():
-<<<<<<< HEAD
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, snowmanAlreadyDrawn
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
     print(mouseX, mouseY)
-=======
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn
->>>>>>> ef7f7d34cdbba5302212f961d60382ef9641c0bd
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -195,7 +181,6 @@ def mouseClicked():
     elif page == "House" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
         
-<<<<<<< HEAD
         if page != "Finished" or page != "Title":
     
             if page != "Finished" and page != "Title":
@@ -231,7 +216,6 @@ def mouseClicked():
                     strokeWeight(3) 
                 elif mouseX > 15 and mouseX < 40 and mouseY > 477.5 and mouseY < 502.5:
                     strokeWeight(13) # thickest stroke weight
-=======
     if page != "Finished" or page != "Title":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
@@ -265,4 +249,3 @@ def mouseClicked():
             strokeWeight(3) 
         elif mouseX > 15 and mouseX < 40 and mouseY > 477.5 and mouseY < 502.5:
             strokeWeight(13) # thickest stroke weight
->>>>>>> ef7f7d34cdbba5302212f961d60382ef9641c0bd
