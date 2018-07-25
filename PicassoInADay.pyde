@@ -11,7 +11,7 @@ penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
-page = "Rainbow" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow
+page = "snowman" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow
 number = int(random(0,3))
 
 def setup():
@@ -74,7 +74,10 @@ def draw():
         # if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
         #     line(pmouseX, pmouseY, mouseX, mouseY) 
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
-            page = "Title"
+            page = "Title" 
+            iceCreamAlreadyDrawn = False
+            penguinAlredyDrawn = False
+            lollipopAlreadyDrawn = False
 
             
     elif page != "Finished" or page != "Title":
@@ -86,15 +89,26 @@ def draw():
     
     # updateRainbowColor()        
         #code used for the next button
+        
+        
+        #penguinAlreadyDrawn = False
+       #iceCreamAlreadyDrawn = False
+       #lollipopAlreadyDrawn = False
+        #rainbowAlreadyDrawn = False
 
 def mouseClicked():
-    global page
-    if page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Ice Cream"
+    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn:
+        page = "Finished"
+    elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page = "Ice Cream" 
     elif page == "Ice Cream"  and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Lollipop"
     elif page == "Lollipop" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Finished"
+        page = "Penguin"
+        
+        
+
 
     if page == "Penguin" or page == "Ice Cream" or page == "Lollipop":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:

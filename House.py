@@ -1,7 +1,4 @@
 def house():
-    
-    size(500,500)
-    background(255)
     fill(255)
     ellipse(0,0,200,200)              #sun
     fill(255)
