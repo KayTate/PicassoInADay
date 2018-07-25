@@ -7,20 +7,22 @@ from Lollipop import *
 from Buttons import *
 from Rainbow import *
 from House import *
+from snowman import *
 
 penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
-page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
+snowmanAlreadyDrawn = False
+page = "Snowman" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Snowman
 number = int(random(0,3))
 
 def setup():
     size(700,550)
     
 def draw():
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, snowmanAlreadyDrawn
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -84,7 +86,17 @@ def draw():
             houseAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
-                    
+            
+    if page == "Snowman":
+        if not snowmanAlreadyDrawn:
+            background(255)
+            Snowman()
+            finishedButton()
+            nextPage()
+            snowmanAlreadyDrawn = True
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
+                         
     if page == "Finished":
         finished(number)
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:

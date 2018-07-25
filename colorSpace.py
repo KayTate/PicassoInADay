@@ -34,7 +34,7 @@ def colorBox():
     rect(xC, 350, bS, bS)
     stroke(0)
     noFill()
-    img = loadImage("question-mark")
+    img = loadImage("question-mark.jpg")
     image(img, bS, 392.5, 20, 15)
     rect(bS, 392.5, bS, bS) # outer box//random colors
                    # EDITTING TOOLS
