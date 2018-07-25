@@ -18,8 +18,8 @@ rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
 ladybugAlreadyDrawn = False
 
-#Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower
-page = "Ladybug"
+#Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower, MoreDrawings
+page = "Title"
 
 #Global variable to assign a random number to the finished function to generate a quote
 number = int(random(0,3))

@@ -51,3 +51,13 @@ def titlePage():
     rect(273.5,344,151,151)
     image(house,274.5,345,150,150)
     text("Castle of Magic",280,530)
+    
+    #More Box
+    stroke(0)
+    fill(255)
+    rect(506.5,345,151,151)
+    fill(0)
+    triangle(540, 370,
+             540, 470,
+             620, 420)
+    
