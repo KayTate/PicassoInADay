@@ -10,6 +10,7 @@ from Rainbow import *
 from House import *
 from snowman import *
 from Ladybug import *
+from More import *
 
 #Global variables to prevent redraw
 penguinAlreadyDrawn = False
@@ -20,7 +21,7 @@ houseAlreadyDrawn = False
 snowmanAlreadyDrawn = False
 ladybugAlreadyDrawn = False
 
-#Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower, MoreDrawings
+#Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower, More Drawings
 page = "Title"
 
 #Global variable to assign a random number to the finished function to generate a quote
@@ -75,6 +76,8 @@ def draw():
             page = "Rainbow"
         if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 345 and mouseY < 495:
             page = "House"
+        if mousePressed and mouseX > 506.5 and mouseX < 656.5 and mouseY > 345 and mouseY < 495:
+            page = "More Drawings"
 
     if page == "Penguin":
         if not penguinAlreadyDrawn:
@@ -156,6 +159,9 @@ def draw():
             rainbowAlreadyDrawn = False
             houseAlreadyDrawn = False
             ladybugAlreadyDrawn = False
+    
+    if page == "More Drawings":
+        more()
 
     elif page != "Finished" or page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
@@ -166,7 +172,7 @@ def draw():
 
 def mouseClicked():
     global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn:
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn:# and ladybugAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
