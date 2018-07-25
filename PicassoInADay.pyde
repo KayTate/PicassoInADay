@@ -18,7 +18,34 @@ number = int(random(0,3))
 
 def setup():
     size(700,550)
+    background(0)
     
+    
+def clearPage():
+    global page 
+    print(page)
+    if page == "Penguin":
+        showPenguin()
+        finishedButton()
+        nextPage()
+    if page == "Ice Cream":
+        icecream()
+        finishedButton()
+        nextPage()
+    if page == "Lollipop":
+        lollipop()
+        finishedButton()
+        nextPage()     
+    if page == "Rainbow":
+        rainbow()
+        finishedButton()
+        nextPage()       
+    if page == "House":
+        house()
+        finishedButton()
+        nextPage()       
+  
+
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn
     if page == "Title":
@@ -110,7 +137,7 @@ def mouseClicked():
     elif page == "Lollipop" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Finished"
 
-    if page == "Penguin" or page == "Ice Cream" or page == "Lollipop":
+    if  page != "Finished" or page != "Title":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
@@ -156,3 +183,5 @@ def mouseClicked():
         elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
             # print("left")  
             strokeWeight(3) 
+        elif mouseX > 15 and mouseX < 40 and mouseY > 477.5 and mouseY < 502.5:
+            strokeWeight(13) # thickest stroke weight

@@ -1,6 +1,9 @@
+# img = loadImage("Star-Transparent-PNG.png")
+
 def titlePage():
+    img = loadImage("stripes.png")
     background(255)
-    
+    image(img, 0, 0, 700, 550)
     #Header
     fill("#8AA8E8")
     noStroke()
