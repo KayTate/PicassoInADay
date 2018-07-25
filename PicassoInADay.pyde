@@ -1,3 +1,4 @@
+#Imports all peripheral files
 from colorSpace import *
 from Penguin import *
 from Title import *
@@ -7,23 +8,35 @@ from Lollipop import *
 from Buttons import *
 from Rainbow import *
 from House import *
+from Ladybug import *
 
+#Global variables to prevent redraw
 penguinAlreadyDrawn = False
 iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
-page = "Finished" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
+<<<<<<< HEAD
+page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
+=======
+ladybugAlreadyDrawn = False
+
+#Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower
+page = "Ladybug"
+
+#Global variable to assign a random number to the finished function to generate a quote
+>>>>>>> eb39da07b8591be47da0dad87fe74161e01546f3
 number = int(random(0,3))
 
 def setup():
     size(700,550)
     background(0)
     
-    
+#Clear page function
 def clearPage():
     global page 
     print(page)
+    #Redraws shape and buttons after button is cleared
     if page == "Penguin":
         showPenguin()
         finishedButton()
@@ -47,7 +60,8 @@ def clearPage():
   
 
 def draw():
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
+    print(mouseX, mouseY)
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -60,7 +74,6 @@ def draw():
             page = "Rainbow"
         if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 345 and mouseY < 495:
             page = "House"
-#Edits
 
     if page == "Penguin":
         if not penguinAlreadyDrawn:
@@ -111,6 +124,16 @@ def draw():
             houseAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
+            
+    if page == "Ladybug":
+        if not ladybugAlreadyDrawn:
+            background(255)
+            ladybug()
+            finishedButton()
+            nextPage()
+            ladybugAlreadyDrawn = True
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
                     
     if page == "Finished":
         finished(number)
@@ -119,6 +142,9 @@ def draw():
             iceCreamAlreadyDrawn = False
             penguinAlredyDrawn = False
             lollipopAlreadyDrawn = False
+            rainbowAlreadyDrawn = False
+            houseAlreadyDrawn = False
+            ladybugAlreadyDrawn = False
 
     elif page != "Finished" or page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
@@ -126,74 +152,57 @@ def draw():
 
     if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
          stroke(random(255), random(255), random(255)) # random color box
-         print("random")
-    
-    # updateRainbowColor()        
-        #code used for the next button
-        
-        
-        #penguinAlreadyDrawn = False
-       #iceCreamAlreadyDrawn = False
-       #lollipopAlreadyDrawn = False
-        #rainbowAlreadyDrawn = False
 
 def mouseClicked():
-    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn:
+    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
     elif page == "Ice Cream"  and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Lollipop"
     elif page == "Lollipop" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page = "Rainbow"
+    elif page == "Rainbow" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page = "House"
+    elif page == "House" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
         
+<<<<<<< HEAD
     if page != "Finished" or page != "Title":
 
+=======
+    if page != "Finished" and page != "Title":
+>>>>>>> eb39da07b8591be47da0dad87fe74161e01546f3
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
-            # print("yellow")
             stroke(104, 67, 42)
-            # rainbowMode = True
         elif mouseX > 35 and mouseX < 70 and mouseY > 52.5 and mouseY < 87.5:
             stroke(0, 0, 0) # black//outer box
-            # rainbowMode = True
         elif mouseX > 10 and mouseX < 45 and mouseY > 95 and mouseY < 130:
             stroke(219, 112, 147) # pink
-            # rainbowMode = True
         elif mouseX > 35 and mouseX < 70 and mouseY > 137.5 and mouseY < 172.5:
             stroke(160, 32, 240) # purple//outer box
-            # rainbowMode = True
         elif mouseX > 10 and mouseX < 45 and mouseY > 180 and mouseY < 215:
             stroke(0, 100, 0) # green
-            # rainbowMode = True
         elif mouseX > 35 and mouseX < 70 and mouseY > 222.5 and mouseY < 257.5:
             stroke(0, 0, 255) # blue//outer box
-            # rainbowMode = True
         elif mouseX > 10 and mouseX < 45 and mouseY > 265 and mouseY < 300:
             stroke(255, 255, 0) # yellow
-            # rainbowMode = True
         elif mouseX > 35 and mouseX < 70 and mouseY > 307.5 and mouseY < 342.5:
             stroke(255, 140, 0) # orange//outer box
-            # rainbowMode = True
         elif mouseX > 10 and mouseX < 45 and mouseY > 350 and mouseY < 385:
             stroke(255, 0, 0) # red
-            # rainbowMode = True
         elif mouseX > 10 and mouseX < 75 and mouseY > 515 and mouseY < 540: # clear
             clearPage()
-            print("clear")
         elif mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
             stroke(random(255), random(255), random(255))
-            print("random")
         elif mouseX > 50 and mouseX < 75 and mouseY > 435 and mouseY < 460:
-            # print("yes")
             strokeWeight(7) # thick stroke weight
         elif mouseX > 50 and mouseX < 75 and mouseY > 477.5 and mouseY < 502.5:
-            # print("right")
             strokeWeight(1) # thin stroke weight
-        elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:
-            # print("left")  
+        elif mouseX > 15 and mouseX < 40 and mouseY > 435 and mouseY < 460:  
             strokeWeight(3) 
         elif mouseX > 15 and mouseX < 40 and mouseY > 477.5 and mouseY < 502.5:
             strokeWeight(13) # thickest stroke weight
