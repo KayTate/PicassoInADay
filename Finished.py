@@ -50,11 +50,11 @@ def finished(number):
     kS = "Kenlen Smith"
     textFont(subTitleFont)
     textSize(24)
-    fill(255, 0, 0)
+    fill(181, 65, 244)
     text(c, 40, 463)
-    text(aC, 80, 527)
+    text(aC, 83, 527)
     text(sJ, 5, 507)
-    text(kT, 80, 488)
+    text(kT, 83, 488)
     text(kS, 5, 545)
     
     

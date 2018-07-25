@@ -13,7 +13,7 @@ iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
-page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
+page = "Finished" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
 number = int(random(0,3))
 
 def setup():
@@ -148,10 +148,6 @@ def mouseClicked():
     elif page == "Lollipop" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
         
-        
-
-
-
     if page != "Finished" or page != "Title":
 
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
