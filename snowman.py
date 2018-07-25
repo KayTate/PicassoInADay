@@ -22,7 +22,11 @@ def Snowman():
     ellipse(375, 238, 15, 15)
     ellipse(375, 268, 15, 15)
     ellipse(375, 298, 15, 15)
-        #the arms
+        #the left arm
     line(200, 300, 300, 268)
     line(200, 268, 220, 295)
     line(210, 325, 220, 293)
+        #the right arm
+    line(450, 268, 550, 295)
+    line(526, 287, 547, 267)
+    line(525, 287, 543, 315)
