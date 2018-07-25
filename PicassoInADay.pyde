@@ -151,11 +151,9 @@ def mouseClicked():
         
 
 
-<<<<<<< HEAD
-    if  page != "Finished" or page != "Title":
-=======
+
     if page != "Finished" or page != "Title":
->>>>>>> bf87ab2cee1c3cc9f34e46fb55331a258190bee2
+
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
