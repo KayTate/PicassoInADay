@@ -13,7 +13,7 @@ iceCreamAlreadyDrawn = False
 lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
-page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
+page = "Rainbow" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
 number = int(random(0,3))
 
 def setup():
