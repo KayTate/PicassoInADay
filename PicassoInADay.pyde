@@ -33,7 +33,7 @@ def draw():
             page = "Rainbow"
         if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 345 and mouseY < 495:
             page = "House"
-
+#Edits
 
     if page == "Penguin":
         if not penguinAlreadyDrawn:
