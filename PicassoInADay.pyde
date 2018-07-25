@@ -8,6 +8,7 @@ from Lollipop import *
 from Buttons import *
 from Rainbow import *
 from House import *
+from snowman import *
 from Ladybug import *
 
 #Global variables to prevent redraw
@@ -17,7 +18,9 @@ lollipopAlreadyDrawn = False
 rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
 ladybugAlreadyDrawn = False
+snowmanAlreadyDrawn = False
 page = "Title" #Other options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House
+#Global variable to assign a random number to the finished function to generate a quote
 number = int(random(0,3))
 def setup():
     size(700,550)
@@ -54,8 +57,7 @@ def clearPage():
         nextPage()
 
 def draw():
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
-    # print(mouseX, mouseY)
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -119,6 +121,16 @@ def draw():
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
             
+    if page == "Snowman":
+        if not snowmanAlreadyDrawn:
+            background(255)
+            Snowman()
+            finishedButton()
+            nextPage()
+            snowmanAlreadyDrawn = True
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
+                         
     if page == "Ladybug":
         if not ladybugAlreadyDrawn:
             background(255)
