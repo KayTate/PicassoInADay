@@ -1,9 +1,9 @@
-# img = loadImage("Star-Transparent-PNG.png")
-
 def titlePage():
+    #Background
     img = loadImage("stripedStairs.jpg")
     background(255)
     image(img, 0, 0, 700, 550)
+    
     #Header
     fill(51, 175, 255)
     noStroke()
@@ -16,7 +16,6 @@ def titlePage():
     textSize(100)
     text("Picasso in a Day", 45, 80)
     
-    
     #Penguin Box
     penguin = loadImage("penguin.PNG")
     stroke(0)
@@ -25,7 +24,6 @@ def titlePage():
     textFont(subTitleFont)
     textSize(25)
     fill(51, 175, 255)
-    
     text("Polly the Penguin",37,315)
     
     #Ice Cream Box

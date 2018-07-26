@@ -36,7 +36,6 @@ def setup():
 #Clear page function
 def clearPage():
     global page 
-    # print(page)
     #Redraws shape and buttons after button is cleared
     if page == "Penguin":
         showPenguin()
@@ -63,17 +62,12 @@ def clearPage():
         finishedButton()
         nextPage() 
         savePicture(255,255,255)      
-    if page == "Ladybug":
-        ladybug()
-        finishedButton()
-        nextPage()
-        savePicture(255,255,255)
     if page == "Robot":
         robot()
         finishedButton()
         nextPage()
         savePicture(255,255,255)
-    if page == "Snowman":
+    if page == "Ladybug":
         ladybug()
         finishedButton()
         nextPage()
@@ -86,7 +80,6 @@ def clearPage():
 
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -191,14 +184,13 @@ def draw():
             ladybugAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
-    
+
     if page == "Robot":
         if not robotAlreadyDrawn:
             background(255)
             robot()
             finishedButton()
             nextPage()
-            savePicture(255,255,255)
             robotAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
@@ -208,15 +200,13 @@ def draw():
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title" 
             iceCreamAlreadyDrawn = False
-            penguinAlredyDrawn = False
+            penguinAlreadyDrawn= False
             lollipopAlreadyDrawn = False
             rainbowAlreadyDrawn = False
             houseAlreadyDrawn = False
             ladybugAlreadyDrawn = False
             robotAlreadyDrawn = False
-    
-    if page == "More Drawings":
-        more()
+            snowmanAlreadyDrawn = False
 
     elif page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
@@ -230,7 +220,7 @@ def draw():
 
 def mouseClicked():
     global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn:
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn and robotAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
@@ -243,9 +233,11 @@ def mouseClicked():
     elif page == "House" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Snowman"
     elif page == "Snowman" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page
-
-        
+        page = "Ladybug"
+    elif page == "Ladybug" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page = "Robot" #and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY  < 70
+    elif page == "Robot" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page = "Penguin"
 
     if page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
