@@ -24,7 +24,7 @@ ladybugAlreadyDrawn = False
 robotAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug
-page = "Lollipop"
+page = "Title"
 
 #Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
@@ -202,12 +202,13 @@ def draw():
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
             page = "Title" 
             iceCreamAlreadyDrawn = False
-            penguinAlredyDrawn = False
+            penguinAlreadyDrawn= False
             lollipopAlreadyDrawn = False
             rainbowAlreadyDrawn = False
             houseAlreadyDrawn = False
             ladybugAlreadyDrawn = False
             robotAlreadyDrawn = False
+            snowmanAlreadyDrawn = False
 
     elif page != "Finished" and page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
@@ -236,7 +237,7 @@ def mouseClicked():
     elif page == "Snowman" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ladybug"
     elif page == "Ladybug" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Robot" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY  < 70
+        page = "Robot" #and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY  < 70
     elif page == "Robot" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
 
