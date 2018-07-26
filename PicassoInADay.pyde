@@ -8,10 +8,10 @@ from Lollipop import *
 from Buttons import *
 from Rainbow import *
 from House import *
-
 from snowman import *
 from Ladybug import *
 from More import *
+from Robot import *
 
 #Global variables to prevent redraw
 penguinAlreadyDrawn = False
@@ -21,11 +21,14 @@ rainbowAlreadyDrawn = False
 houseAlreadyDrawn = False
 snowmanAlreadyDrawn = False
 ladybugAlreadyDrawn = False
+robotAlreadyDrawn = False
 
-#Global variable to change page; Options: Penguin, Ice Cream, Lollipop, Finished, Rainbow, House, Sunflower, More Drawings
-page = "Title"
+#Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug
+page = "Penguin"
 
+#Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
+
 def setup():
     size(700,550)
     background(0)
@@ -39,30 +42,50 @@ def clearPage():
         showPenguin()
         finishedButton()
         nextPage()
+        savePicture(255,255,255)
     if page == "Ice Cream":
         icecream()
         finishedButton()
         nextPage()
+        savePicture(255,255,255)
     if page == "Lollipop":
         lollipop()
         finishedButton()
-        nextPage()     
+        nextPage()   
+        savePicture(255,255,255)  
     if page == "Rainbow":
         rainbow()
         finishedButton()
-        nextPage()       
+        nextPage()   
+        savePicture(255,255,255)    
     if page == "House":
         house()
         finishedButton()
-        nextPage()       
+        nextPage() 
+        savePicture(255,255,255)      
     if page == "Ladybug":
         ladybug()
         finishedButton()
         nextPage()
+        savePicture(255,255,255)
+    if page == "Robot":
+        robot()
+        finishedButton()
+        nextPage()
+        savePicture(255,255,255)
+    if page == "Snowman":
+        ladybug()
+        finishedButton()
+        nextPage()
+        savePicture(255,255,255)
+    # if page == "Bee":
+    #     bee()
+    #     finishedButton()
+    #     nextPage()
+    #     savePicture(255,255,255)
 
 def draw():
-
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
     
     if page == "Title":
         titlePage()
@@ -85,6 +108,7 @@ def draw():
             showPenguin()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             penguinAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
@@ -95,16 +119,18 @@ def draw():
             icecream()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             iceCreamAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
-            
+
     if page == "Lollipop":
         if not lollipopAlreadyDrawn:
             background(255)
             lollipop()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             lollipopAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
@@ -115,6 +141,7 @@ def draw():
             rainbow()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             rainbowAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
@@ -125,6 +152,7 @@ def draw():
             house()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             houseAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
@@ -135,6 +163,7 @@ def draw():
             Snowman()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             snowmanAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
@@ -145,7 +174,19 @@ def draw():
             ladybug()
             finishedButton()
             nextPage()
+            savePicture(255,255,255)
             ladybugAlreadyDrawn = True
+        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
+            line(pmouseX, pmouseY, mouseX, mouseY) 
+    
+    if page == "Robot":
+        if not robotAlreadyDrawn:
+            background(255)
+            robot()
+            finishedButton()
+            nextPage()
+            savePicture(255,255,255)
+            robotAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
                     
@@ -159,19 +200,23 @@ def draw():
             rainbowAlreadyDrawn = False
             houseAlreadyDrawn = False
             ladybugAlreadyDrawn = False
+            robotAlreadyDrawn = False
     
     if page == "More Drawings":
         more()
 
-    elif page != "Finished" or page != "Title":
+    elif page != "Finished" and page != "Title":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"
+        if mousePressed and mouseX > 560 and mouseX < 680 and mouseY > 480 and mouseY < 530:
+            save("SavedPictures/" + page + ".png")
+            savePicture(208, 171, 232)
 
     if mousePressed and mouseX > 35 and mouseX < 70 and mouseY > 392 and mouseY < 427.5:
          stroke(random(255), random(255), random(255)) # random color box
 
 def mouseClicked():
-    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn
+    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, robotAlreadyDrawn
     if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn:# and ladybugAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
@@ -186,7 +231,7 @@ def mouseClicked():
         page = "Penguin"
         
 
-    if page != "Finished" or page != "Title":
+    if page != "Finished" and page != "Title":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
