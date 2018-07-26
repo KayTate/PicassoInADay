@@ -24,7 +24,7 @@ ladybugAlreadyDrawn = False
 robotAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug
-page = "Title"
+page = "Lollipop"
 
 #Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
@@ -73,7 +73,7 @@ def clearPage():
         finishedButton()
         nextPage()
         savePicture(255,255,255)
-    if page == "Snowman":
+    if page == "Ladybug":
         ladybug()
         finishedButton()
         nextPage()
@@ -86,7 +86,7 @@ def clearPage():
 
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    
+    print(page)
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:

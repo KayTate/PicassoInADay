@@ -2,10 +2,6 @@ bS = 35
 xC = 10
 bS2 = 25
 xC2 = 15
-# add 42.5 to every y cordinate ( for the outer color box)
-
-# rainbowMode = False
-
 
 def colorBox(): 
     global page
@@ -65,12 +61,3 @@ def colorBox():
     textSize(18);
     text("CLEAR", 15, 535);
     rect(xC, 515, 65, bS2) # CLEAR box
-    
-    
-# def setRainbowMode():
-#     global rainbowMode
-#     rainbowMode = True
-    
-    
-# def updateRainbowColor():
-#     stroke(random(255), random(255), random(255))

@@ -1,17 +1,17 @@
 from colorSpace import *
 
 def rainbow():
-    cloud = loadShape("cloud.svg") #Loads new shape
+    cloud = loadShape("cloud.svg")       #Loads shape for cloud
     
-    colorBox() #Loads color pallette and functions
+    colorBox()
     
     shape(cloud, 100, 300, 280, 200)
     shape(cloud, 415, 300, 280, 200)
     
     stroke(0)
     strokeWeight(7)
-    arc(395, 440, 571, 754, #Ellipse Definition
-        PI+.0505, 2*PI-.09, OPEN) #Arc Parameters
+    arc(395, 440, 571, 754,              #Ellipse Definition
+        PI+.0505, 2*PI-.09, OPEN)        #Arc Parameters
     arc(395, 440, 500, 660,
         PI+.202, 2*PI-.19, OPEN)
     arc(395, 440, 429, 566,

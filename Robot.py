@@ -2,23 +2,29 @@ from colorSpace import *
 
 def robot():
     colorBox()
-    fill(255 )
-    rect(160+150,45,150,150)#top square
-    rect(134+150, 196, 210,200)#bottom square
-    rect(345+150, 250, 15, 40)
+    
+    fill(255)
+    rect(160+150,45,150,150)                 #Head
+    rect(134+150, 196, 210,200)              #Body
+    
+    rect(345+150, 250, 15, 40)               #Right Arm
     rect(360+150, 257, 50, 26)
     ellipse(415+150,270,30,40)
-    rect(119+150, 250, 15, 40)
+    
+    rect(119+150, 250, 15, 40)               #Left Arm
     rect(69+150, 257, 50, 26)
-    ellipse(60+150, 270, 30, 40)#lefthand
-    rect(160+150, 396, 26, 80)#left leg
-    rect(290+150, 396, 26, 80)#right leg
-    ellipse(180+150, 75, 20, 30)
+    ellipse(60+150, 270, 30, 40)
+    
+    rect(160+150, 396, 26, 80)               #Left Leg
+    rect(290+150, 396, 26, 80)               #Right Leg
+    
+    ellipse(180+150, 75, 20, 30)             #Eyes
     ellipse(290+150, 75, 20, 30)
     fill(0)
-    ellipse(185+150,70, 10, 10) 
+    ellipse(185+150,70, 10, 10)              #Pupils
     ellipse(295+150, 70, 10, 10)
-    noFill()
+    
+    noFill()                                 #Mouth
     rect(208+150, 150, 50, 26)
     line(210+150, 151, 210+150, 176)
     line(215+150, 151, 215+150, 176)
