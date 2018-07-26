@@ -15,7 +15,7 @@ def more():
     textSize(100)
     text("Picasso in a Day", 45, 80)
     
-      #Ladybug Box
+    #Ladybug Box
     penguin = loadImage("penguin.PNG")
     stroke(0)
     rect(40.5,129,151,151)
@@ -49,7 +49,7 @@ def more():
     textFont(subTitleFont)
     text("Buzzy Bee",37,530)
     
-    # back button
+    #Back Button
     stroke(0)
     fill(255)
     rect(273.5,344,151,151)
