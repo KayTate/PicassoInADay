@@ -216,8 +216,8 @@ def draw():
          stroke(random(255), random(255), random(255)) # random color box
 
 def mouseClicked():
-    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, robotAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn:# and ladybugAlreadyDrawn:
+    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
@@ -228,7 +228,10 @@ def mouseClicked():
     elif page == "Rainbow" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "House"
     elif page == "House" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Penguin"
+        page = "Snowman"
+    elif page == "Snowman" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
+        page
+
         
 
     if page != "Finished" and page != "Title":
