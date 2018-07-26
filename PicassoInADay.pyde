@@ -24,7 +24,7 @@ ladybugAlreadyDrawn = False
 robotAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug
-page = "Title"
+page = "House"
 
 #Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
@@ -161,7 +161,7 @@ def draw():
             savePicture(255,255,255)
             houseAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-            line(pmouseX, pmouseY, mouseX, mouseY) 
+            line(pmouseX, pmouseY, mouseX, mouseY)
             
     if page == "Snowman":
         if not snowmanAlreadyDrawn:
