@@ -101,6 +101,19 @@ def draw():
             page = "House"
         if mousePressed and mouseX > 506.5 and mouseX < 656.5 and mouseY > 345 and mouseY < 495:
             page = "More Drawings"
+            
+    if page == "More Drawings":
+        more()
+        if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 345 and mouseY < 495:
+            page = "Title"  # back button
+        if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
+            page = "Ladybug"
+        if mousePressed and mouseX > 274.5 and mouseX < 424.5 and mouseY > 130 and mouseY < 280:
+            page = "Robot"
+        if mousePressed and mouseX > 506.5 and mouseX < 656.5 and mouseY > 130 and mouseY < 280:
+            page = "Snowman"
+        if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 345 and mouseY < 495:
+            page = "Bee"
 
     if page == "Penguin":
         if not penguinAlreadyDrawn:
