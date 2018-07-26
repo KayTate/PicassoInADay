@@ -36,7 +36,6 @@ def setup():
 #Clear page function
 def clearPage():
     global page 
-    print(page)
     #Redraws shape and buttons after button is cleared
     if page == "Penguin":
         showPenguin()
@@ -81,7 +80,6 @@ def clearPage():
 
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    print(page)
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -210,7 +208,7 @@ def draw():
             robotAlreadyDrawn = False
             snowmanAlreadyDrawn = False
 
-    elif page != "Finished" and page != "Title":
+    elif page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"
         if mousePressed and mouseX > 560 and mouseX < 680 and mouseY > 480 and mouseY < 530:
@@ -222,7 +220,7 @@ def draw():
 
 def mouseClicked():
     global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn:
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn and robotAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
@@ -241,7 +239,7 @@ def mouseClicked():
     elif page == "Robot" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
 
-    if page != "Finished" and page != "Title":
+    if page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:
