@@ -42,10 +42,10 @@ def more():
     text("Frosty",552,315)
     
     #Bee Box
-    #rainbow = loadImage("rainbow.png")
+    bee = loadImage("bee.png")
     stroke(0)
     rect(40.5,344,151,151)
-    #image(rainbow,41.5,345,150,150)
+    image(bee,41.5,345,150,150)
     textFont(subTitleFont)
     text("Buzzy Bee",68,530)
     
