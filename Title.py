@@ -68,4 +68,5 @@ def titlePage():
     triangle(540, 370,
              540, 470,
              620, 420)
-    
+    fill(51, 175, 255)
+    text("More Drawings",520,530)
