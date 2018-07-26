@@ -36,7 +36,6 @@ def setup():
 #Clear page function
 def clearPage():
     global page 
-    print(page)
     #Redraws shape and buttons after button is cleared
     if page == "Penguin":
         showPenguin()
@@ -81,7 +80,6 @@ def clearPage():
 
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    print(page)
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -222,7 +220,7 @@ def draw():
 
 def mouseClicked():
     global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn:
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn and robotAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
