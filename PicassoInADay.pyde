@@ -24,7 +24,7 @@ ladybugAlreadyDrawn = False
 robotAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug
-page = "Penguin"
+page = "Title"
 
 #Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
@@ -36,7 +36,7 @@ def setup():
 #Clear page function
 def clearPage():
     global page 
-    print(page)
+    # print(page)
     #Redraws shape and buttons after button is cleared
     if page == "Penguin":
         showPenguin()
@@ -218,7 +218,7 @@ def draw():
     if page == "More Drawings":
         more()
 
-    elif page != "Finished" and page != "Title":
+    elif page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
             page = "Finished"
         if mousePressed and mouseX > 560 and mouseX < 680 and mouseY > 480 and mouseY < 530:
@@ -247,7 +247,7 @@ def mouseClicked():
 
         
 
-    if page != "Finished" and page != "Title":
+    if page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY)
         if mouseX > 10 and mouseX < 45 and mouseY > 10 and mouseY < 45:

@@ -16,7 +16,7 @@ def more():
     text("Picasso in a Day", 45, 80)
     
       #Ladybug Box
-    penguin = loadImage("penguin.PNG")
+    penguin = loadImage("ladybug.png")
     stroke(0)
     rect(40.5,129,151,151)
     image(penguin,41.5,130,150,150)
@@ -34,7 +34,7 @@ def more():
     text("Mr. Tin Man",250,315)
     
     #Snowman Box
-    snowman = loadImage("snowman.png")
+    snowman = loadImage("Snowman.png")
     stroke(0)
     rect(506.5,129,151,151)
     image(snowman,507.5,130,150,150)
