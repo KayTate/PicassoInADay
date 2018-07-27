@@ -11,7 +11,7 @@ def rainbow():
     stroke(0)
     strokeWeight(7)
     arc(395, 440, 571, 754,              #Ellipse Definition
-        PI+.0505, 2*PI-.09, OPEN)        #Arc Parameters
+        PI+.0505, 2*PI-.09, OPEN)        #Arc Definition
     arc(395, 440, 500, 660,
         PI+.202, 2*PI-.19, OPEN)
     arc(395, 440, 429, 566,

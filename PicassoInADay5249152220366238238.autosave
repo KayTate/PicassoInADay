@@ -12,7 +12,6 @@ from snowman import *
 from Ladybug import *
 from More import *
 from Robot import *
-from Bee import *
 
 #Global variables to prevent redraw
 penguinAlreadyDrawn = False
@@ -23,10 +22,9 @@ houseAlreadyDrawn = False
 snowmanAlreadyDrawn = False
 ladybugAlreadyDrawn = False
 robotAlreadyDrawn = False
-beeAlreadyDrawn = False
 
-#Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug, Bee
-page = "Bee"
+#Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug
+page = "Title"
 
 #Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
@@ -74,15 +72,14 @@ def clearPage():
         finishedButton()
         nextPage()
         savePicture(255,255,255)
-    if page == "Bee":
-        bee()
-        finishedButton()
-        nextPage()
-        savePicture(255,255,255)
+    # if page == "Bee":
+    #     bee()
+    #     finishedButton()
+    #     nextPage()
+    #     savePicture(255,255,255)
 
 def draw():
-    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn, beeAlreadyDrawn
-    
+    global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
     if page == "Title":
         titlePage()
         if mousePressed and mouseX > 40.5 and mouseX < 191.5 and mouseY > 130 and mouseY < 280:
@@ -194,22 +191,10 @@ def draw():
             robot()
             finishedButton()
             nextPage()
-            savePicture(255,255,255)
             robotAlreadyDrawn = True
         if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
             line(pmouseX, pmouseY, mouseX, mouseY) 
-    
-    if page == "Bee":
-        if not beeAlreadyDrawn:
-            background(255)
-            bee()
-            finishedButton()
-            nextPage()
-            savePicture(255,255,255)
-            beeAlreadyDrawn = True
-        if mousePressed and mouseX > 100 and mouseX < 695 and mouseY > 5 and mouseY < 540 and pmouseX > 100 and pmouseX < 695 and pmouseY > 5 and pmouseY < 540:
-            line(pmouseX, pmouseY, mouseX, mouseY) 
-                                                    
+                    
     if page == "Finished":
         finished(number)
         if mousePressed and mouseX > 580 and mouseX < 680 and mouseY > 490 and mouseY < 540:
@@ -222,7 +207,6 @@ def draw():
             ladybugAlreadyDrawn = False
             robotAlreadyDrawn = False
             snowmanAlreadyDrawn = False
-            beeAlreadyDrawn = False
 
     elif page != "Finished" and page != "Title" and page != "More Drawings":
         if mousePressed and mouseX > 630 and mouseX < 680 and mouseY > 20 and mouseY < 70:
@@ -235,8 +219,8 @@ def draw():
          stroke(random(255), random(255), random(255)) # random color box
 
 def mouseClicked():
-    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn, beeAlreadyDrawn
-    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn and robotAlreadyDrawn and beeAlreadyDrawn:
+    global page, iceCreamAlreadyDrawn, penguinAlreadyDrawn, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn
+    if iceCreamAlreadyDrawn and penguinAlreadyDrawn and lollipopAlreadyDrawn and rainbowAlreadyDrawn and houseAlreadyDrawn and ladybugAlreadyDrawn and snowmanAlreadyDrawn and robotAlreadyDrawn:
         page = "Finished"
     elif page == "Penguin" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Ice Cream" 
@@ -253,8 +237,6 @@ def mouseClicked():
     elif page == "Ladybug" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Robot" #and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY  < 70
     elif page == "Robot" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
-        page = "Bee"
-    elif page == "Bee" and mouseX > 560 and mouseX < 610 and mouseY > 20 and mouseY < 70:
         page = "Penguin"
 
     if page != "Finished" and page != "Title" and page != "More Drawings":
