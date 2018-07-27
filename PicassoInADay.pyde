@@ -26,7 +26,7 @@ robotAlreadyDrawn = False
 beeAlreadyDrawn = False
 
 #Global variable to change page; Options: Penguin, title, Ice Cream, Lollipop, Finished, Rainbow, House, More Drawings, Robot, Snowman, Ladybug, Bee
-page = "Bee"
+page = "Title"
 
 #Generates a random number to send to finished function in order to get random quote
 number = int(random(0,3))
