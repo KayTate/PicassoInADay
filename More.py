@@ -15,7 +15,7 @@ def more():
     textSize(100)
     text("Picasso in a Day", 45, 80)
     
-      #Ladybug Box
+    #Ladybug Box
     penguin = loadImage("ladybug.png")
     stroke(0)
     rect(40.5,129,151,151)
@@ -23,7 +23,7 @@ def more():
     textFont(subTitleFont)
     textSize(25)
     fill(51, 175, 255)
-    text("Larry the Ladybug",30,315)
+    text("Lisa the Ladybug",30,315)
     
     #Robot Box
     robot = loadImage("robot.png")
@@ -34,7 +34,7 @@ def more():
     text("Mr. Tin Man",290,315)
     
     #Snowman Box
-    snowman = loadImage("Snowman.png")
+    snowman = loadImage("snowman.png")
     stroke(0)
     rect(506.5,129,151,151)
     image(snowman,507.5,130,150,150)
@@ -42,10 +42,10 @@ def more():
     text("Frosty",552,315)
     
     #Bee Box
-    #rainbow = loadImage("rainbow.png")
+    bee = loadImage("bee.png")
     stroke(0)
     rect(40.5,344,151,151)
-    #image(rainbow,41.5,345,150,150)
+    image(bee,41.5,345,150,150)
     textFont(subTitleFont)
     text("Buzzy Bee",68,530)
     

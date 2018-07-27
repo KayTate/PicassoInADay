@@ -4,7 +4,7 @@ def icecream():
     colorBox()
     strokeWeight(2)
     noFill()
-    ellipse(405, 130, 200, 145 )
+    ellipse(405, 130, 200, 145)
     fill(255)
     triangle( 405, 470, 500, 165, 310, 165)
     noFill()
