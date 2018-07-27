@@ -79,6 +79,11 @@ def clearPage():
         finishedButton()
         nextPage()
         savePicture(255,255,255)
+    if page == "Snowman":
+        Snowman()
+        finishedButton()
+        nextPage()
+        savePicture(255,255,255)
 
 def draw():
     global page, penguinAlreadyDrawn, iceCreamAlreadyDrawn, number, lollipopAlreadyDrawn, rainbowAlreadyDrawn, houseAlreadyDrawn, ladybugAlreadyDrawn, snowmanAlreadyDrawn, robotAlreadyDrawn, beeAlreadyDrawn
